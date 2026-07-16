@@ -112,6 +112,17 @@ class OssnInstallation extends stdClass {
 		}
 
 		/**
+		 * Check if the web server is nginx
+		 *
+		 */
+		public static function isNginx() {
+				if(isset($_SERVER['SERVER_SOFTWARE']) && preg_match('/nginx/i', $_SERVER['SERVER_SOFTWARE'])) {
+						return true;
+				}
+				return false;
+		}
+
+		/**
 		 * Check if configuration directory is writeable or not
 		 *
 		 * @last edit: $arsalanshah

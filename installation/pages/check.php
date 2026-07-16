@@ -99,11 +99,11 @@ if (OssnInstallation::is_mysqli_enabled()) {
     echo '<div class="ossn-installation-message ossn-installation-fail">'.ossn_installation_print('ossn:install:mysqli:required').'</div>';
     $error[] = 'mysqli';
 }
-if (OssnInstallation::isApache()) {
-    echo '<div class="ossn-installation-message ossn-installation-success">'.ossn_installation_print('ossn:install:apache').'</div>';
+if (OssnInstallation::isApache() || OssnInstallation::isNginx()) {
+    echo '<div class="ossn-installation-message ossn-installation-success">'.ossn_installation_print('ossn:install:webserver').'</div>';
 } else {
-    echo '<div class="ossn-installation-message ossn-installation-fail">'.ossn_installation_print('ossn:install:apache:required').'</div>';
-    $error[] = 'apache';
+    echo '<div class="ossn-installation-message ossn-installation-fail">'.ossn_installation_print('ossn:install:webserver:required').'</div>';
+    $error[] = 'webserver';
 }
 if (!in_array('php:curl', $error)) {
 	$modrewrite_check = OssnInstallation::is_mod_rewrite();

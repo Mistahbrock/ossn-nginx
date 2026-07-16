@@ -48,6 +48,9 @@ $englsih = array(
 		'ossn:install:apache'               => 'APACHE ENABLED',
 		'ossn:install:apache:required'      => 'APACHE IS REQUIRED',
 
+		'ossn:install:webserver'            => 'WEB SERVER (Apache/Nginx)',
+		'ossn:install:webserver:required'   => 'APACHE OR NGINX IS REQUIRED',
+
 		'ossn:install:modrewrite'           => 'MOD_REWRITE',
 		'ossn:install:modrewrite:required'  => 'MOD_REWRITE REQUIRED',
 

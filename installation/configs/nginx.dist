@@ -1,0 +1,101 @@
+# v9.1.0.0
+# Open Source Social Network - nginx server configuration
+#
+# @package   nginx.ossn
+# @author    OSSN Core Team <info@opensource-socialnetwork.org>
+# @copyright (c) Engr. Syed Arsalan Hussain Shah (OpenTeknik LLC)
+# @license   OPEN SOURCE SOCIAL NETWORK LICENSE https://opensource-socialnetwork.org/licence
+# @link      https://www.opensource-socialnetwork.org
+#
+# This file is the nginx equivalent of installation/configs/htaccess.dist.
+# nginx does NOT read per-directory .htaccess files, so these rules must live
+# in the server block. To deploy:
+#
+#   1. Copy this file to /etc/nginx/sites-available/ossn.conf
+#      (or /etc/nginx/conf.d/ossn.conf).
+#   2. Edit the three marked values: server_name, root, and the php-fpm
+#      fastcgi_pass socket.
+#   3. Enable it (ln -s .../sites-available/ossn.conf /etc/nginx/sites-enabled/)
+#      then: nginx -t && systemctl reload nginx
+#
+# PHP settings (memory_limit, upload sizes, etc.) are applied by PHP-FPM via
+# the generated .user.ini file, exactly as under Apache.
+
+server {
+    listen      80;
+    listen      [::]:80;
+
+    server_name example.com www.example.com;   # <-- CHANGE to your domain
+    root        /var/www/ossn;                  # <-- CHANGE to the OSSN directory
+    index       index.php;
+
+    # Options -Indexes  (no directory listing)
+    autoindex off;
+
+    # Options +SymlinksIfOwnerMatch
+    disable_symlinks if_not_owner;
+
+    # Allow the largest configured upload (matches post_max_size = 105M)
+    client_max_body_size 105M;
+
+    # --- Never serve dotfiles: .htaccess, .user.ini, .git, ... ---
+    location ~ /\.(?!well-known) {
+        deny all;
+    }
+
+    # --- <Files "error_log"> and <FilesMatch "(nginx|htaccess).dist"> ---
+    location = /error_log { return 404; }
+    location ~ \.dist$    { return 404; }
+
+    # --- Disallow CLI/CRON scripts and internal source directories ---
+    # (RedirectMatch 404 ... from the .htaccess)
+    location = /system/handlers/cli  { return 404; }
+    location = /system/handlers/cron { return 404; }
+    location ^~ /upgrade/upgrades/    { return 404; }
+    location ~ /(actions|libraries|classes)/ { return 404; }
+    location ~ /plugins/default/      { return 404; }
+
+    # --- URL-rewrite self-test used by the installer's mod_rewrite check ---
+    # RewriteRule ^rewrite.php$ installation/tests/apache_rewrite.php
+    location = /rewrite.php {
+        rewrite ^ /installation/tests/apache_rewrite.php last;
+    }
+
+    # --- Action handler ---
+    # RewriteRule ^action/(...)$ system/handlers/actions.php?action=$1
+    location ~ ^/action/([A-Za-z0-9_\-/]+)$ {
+        rewrite ^/action/(.+)$ /system/handlers/actions.php?action=$1 last;
+    }
+
+    # --- Static assets: long cache (mod_expires) + CORS for images (mod_headers) ---
+    location ~* \.(jpg|jpeg|png|gif|webp|svg|ico)$ {
+        add_header Access-Control-Allow-Origin "*";
+        expires 1y;
+        try_files $uri =404;
+    }
+    location ~* \.(mp3|flv|mov|avi|3gp|html|htm|swf|js|css)$ {
+        expires 1y;
+        try_files $uri =404;
+    }
+
+    # --- Clean-URL front controller ---
+    # RewriteCond !-f / !-d  then  index.php?h=$1  and  index.php?h=$1&p=$2
+    location / {
+        try_files $uri $uri/ @ossn;
+    }
+    location @ossn {
+        rewrite ^/([A-Za-z0-9_\-.]+)/(.*)$ /index.php?h=$1&p=$2 last;
+        rewrite ^/([A-Za-z0-9_\-.]+)$      /index.php?h=$1 last;
+    }
+
+    # --- PHP execution via PHP-FPM ---
+    location ~ \.php$ {
+        try_files $uri =404;
+        include fastcgi_params;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_index index.php;
+        fastcgi_read_timeout 300;
+        fastcgi_pass unix:/run/php/php-fpm.sock;   # <-- CHANGE to your PHP-FPM socket
+    }
+}
