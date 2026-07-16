@@ -1,0 +1,93 @@
+/******************************************************************
+ * OSSN Dark theme — admin panel colour override
+ * Loaded after administrator.php so these rules win.
+ ******************************************************************/
+:root {
+	--dk-bg:        #0f1216;
+	--dk-surface:   #1a1e24;
+	--dk-surface-2: #232a32;
+	--dk-border:    #2b323b;
+	--dk-text:      #e6e8eb;
+	--dk-muted:     #9aa4af;
+	--dk-accent-2:  #0b769c;
+}
+
+body { background-color: var(--dk-bg) !important; color: var(--dk-text); }
+
+/* Admin top bar + submenus */
+.navbar-default,
+.topbar-menu,
+.admin-topbar-menu-li-home,
+.admin-topbar-menu-li-help,
+.admin-topbar-menu-li-viewsite,
+.admin-topbar-menu-li-support,
+.admin-topbar-menu-li-configure,
+.admin-topbar-smenu-usermanager,
+.admin-topbar-smenu-themes,
+.admin-topbar-smenu-settings,
+.admin-topbar-smenu-components {
+	background-color: var(--dk-surface) !important;
+	color: var(--dk-text) !important;
+	border-color: var(--dk-border) !important;
+}
+.navbar-default a, .topbar-menu a { color: var(--dk-text) !important; }
+
+/* Dashboard + content surfaces */
+.ossn-admin-dashboard,
+.ossn-admin-pg-content,
+.ossn-admin-all-users,
+.admin-dashboard-contents-small,
+.admin-dashboard-box-small,
+.ossn-admin-search-pro-line,
+.ossn-admin-users-search-actions-header,
+.card,
+.card-body,
+.card-spacing {
+	background-color: var(--dk-surface) !important;
+	color: var(--dk-text) !important;
+	border-color: var(--dk-border) !important;
+}
+.card-header, .card-footer {
+	background-color: var(--dk-surface-2) !important;
+	border-color: var(--dk-border) !important;
+	color: var(--dk-text) !important;
+}
+
+/* Dropdowns */
+.dropdown-submenu, .dropdown-menu {
+	background-color: var(--dk-surface-2) !important;
+	color: var(--dk-text) !important;
+	border-color: var(--dk-border) !important;
+}
+.dropdown-menu a:hover { background-color: #2c343d !important; }
+
+/* Tables */
+.table-titles, .table td, .table th, table td, table th {
+	border-color: var(--dk-border) !important;
+	color: var(--dk-text);
+}
+.table-striped tbody tr:nth-of-type(odd) { background-color: var(--dk-surface-2); }
+
+/* Pagination */
+.page-link {
+	background-color: var(--dk-surface-2) !important;
+	color: var(--dk-text) !important;
+	border-color: var(--dk-border) !important;
+}
+.page-item.active .page-link {
+	background-color: var(--dk-accent-2) !important;
+	border-color: var(--dk-accent-2) !important;
+	color: #fff !important;
+}
+
+/* Form controls */
+input.form-control, textarea.form-control, select.form-control,
+.ossn-form input, .ossn-form textarea, .ossn-form select {
+	background-color: #12161b !important;
+	color: var(--dk-text) !important;
+	border: 1px solid var(--dk-border) !important;
+}
+::placeholder { color: var(--dk-muted) !important; }
+
+h1,h2,h3,h4,h5,h6 { color: var(--dk-text); }
+hr { border-color: var(--dk-border); }

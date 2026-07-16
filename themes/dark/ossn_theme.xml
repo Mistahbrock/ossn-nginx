@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme xmlns="http://www.opensource-socialnetwork.org/theme/v/3.0">
+    <name>Dark</name>
+    <id>dark</id>
+    <author>Core Team</author>
+    <author_url>https://www.opensource-socialnetwork.org/</author_url>
+    <description>A dark variant of the GoBlue responsive theme.</description>
+    <license>Open Source Social Network License (OSSN LICENSE)</license>
+    <license_url>https://www.opensource-socialnetwork.org/licence</license_url>
+    <version>9.6</version>
+	<requires>
+		<type>ossn_version</type>
+		<version>9.9</version>
+	</requires>
+</theme>
