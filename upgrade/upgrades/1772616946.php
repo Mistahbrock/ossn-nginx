@@ -10,7 +10,6 @@
  */
 
 //update version once done
-ossn_generate_server_config('apache');
 ossn_version_upgrade('9.0');
 
 $ossn_site_page_update_getpage_5x_8x = function ($page) {

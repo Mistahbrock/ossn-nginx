@@ -986,33 +986,11 @@ function ossn_set_ajax_data(array $data = array()) {
 /**
  * Generate server level config files
  *
- * @param string $type php_user_ini or apache config?
+ * @param string $type php_user_ini
  * @return boolean
  */
 function ossn_generate_server_config($type): bool {
-		if($type == 'apache') {
-				$path = ossn_route()->www;
-				$file = $path . 'installation/configs/htaccess.dist';
-
-				//[B] Apache config being rewritten if modified by cpanel #2179
-				$comapreFunc = function ($file) {
-						$file = fopen($file, 'r');
-						$line = fgets($file);
-						fclose($file);
-						$line = preg_replace('/\s+/', '', trim($line));
-						return str_replace('#', '', $line);
-				};
-
-				//[E] Stop rewriting .htaccess every time page loads during installation #2091
-				if(file_exists($path . '.htaccess')) {
-						$actual_check_sum = $comapreFunc($path . '.htaccess');
-						$org_check_sum    = $comapreFunc($file);
-						if($org_check_sum == $actual_check_sum) {
-								return true;
-						}
-				}
-				return file_put_contents($path . '.htaccess', file_get_contents($file));
-		} elseif($type == 'php_user_ini') {
+		if($type == 'php_user_ini') {
 				$path = ossn_route()->www;
 				$file = $path . 'installation/configs/user.ini.dist';
 				$file = file_get_contents($file);

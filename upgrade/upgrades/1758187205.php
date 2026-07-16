@@ -26,7 +26,6 @@ ALTER TABLE `ossn_users` ENGINE=InnoDB;";
 ossn_run_sql_script($v84update);
 
 //update version once sql is done
-ossn_generate_server_config('apache');
 ossn_version_upgrade('8.4');
 
 $factory = new OssnFactory(array(

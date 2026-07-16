@@ -15,11 +15,6 @@
 </header>
 <?php 
 echo '<div><div class="layout-installation"><div class="ossn-installation-checklist">';
-//overwriting of php's default settings by Ossn not working on some servers #965
-/*if(!preg_match('/apache/', php_sapi_name()) && !preg_match('/litespeed/', php_sapi_name())){
-    echo '<div class="ossn-installation-message ossn-installation-fail">APACHE, PHP_SAPI ('.php_sapi_name().')</div>';
-    $error[] = 'php_sapi_apache';	
-}*/
 $error = array();
 if (OssnInstallation::isPhp()) {
     echo '<div class="ossn-installation-message ossn-installation-success">'. ossn_installation_print('ossn:install:php') . PHP_VERSION . ' </div>';
@@ -99,7 +94,7 @@ if (OssnInstallation::is_mysqli_enabled()) {
     echo '<div class="ossn-installation-message ossn-installation-fail">'.ossn_installation_print('ossn:install:mysqli:required').'</div>';
     $error[] = 'mysqli';
 }
-if (OssnInstallation::isApache() || OssnInstallation::isNginx()) {
+if (OssnInstallation::isNginx()) {
     echo '<div class="ossn-installation-message ossn-installation-success">'.ossn_installation_print('ossn:install:webserver').'</div>';
 } else {
     echo '<div class="ossn-installation-message ossn-installation-fail">'.ossn_installation_print('ossn:install:webserver:required').'</div>';

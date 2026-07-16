@@ -22,7 +22,6 @@ if($entities) {
 		}
 }
 
-ossn_generate_server_config('apache');
 ossn_version_upgrade('8.5');
 
 $factory = new OssnFactory(array(

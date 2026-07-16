@@ -8,7 +8,7 @@ Errors were fixed during testing!
 
 ## Installation
 
-* Generates Apache Configuration 		<b><b>[OK]</b></b>
+* Generates PHP-FPM (.user.ini) Configuration 		<b><b>[OK]</b></b>
 * Database Save 		 		            <b>[OK]</b>
 * Finish 					                  <b>[OK]</b>
 * Writes INSTALLED File				      <b>[OK]</b>

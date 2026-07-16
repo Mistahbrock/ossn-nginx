@@ -19,7 +19,6 @@ ossn_run_sql_script($v86update);
 
 
 //update version once done
-ossn_generate_server_config('apache');
 ossn_version_upgrade('8.6');
 
 $factory = new OssnFactory(array(

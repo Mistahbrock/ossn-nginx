@@ -10,7 +10,6 @@
  */
 
 //update version once done
-ossn_generate_server_config('apache');
 ossn_version_upgrade('9.10');
 
 $factory = new OssnFactory(array(

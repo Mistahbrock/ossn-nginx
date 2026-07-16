@@ -90,7 +90,6 @@ if(com_is_active('OssnWall')) {
 }
 
 //update version once done
-ossn_generate_server_config('apache');
 ossn_version_upgrade('8.2');
 
 $factory = new OssnFactory(array(

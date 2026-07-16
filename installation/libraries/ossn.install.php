@@ -234,29 +234,7 @@ function ossn_installation_simple_curl($url = '') {
  * @return boolean
  */
 function ossn_generate_server_config_setup($type): bool {
-		if($type == 'apache') {
-				$path = str_replace('installation/', '', ossn_installation_paths()->root);
-				$file = ossn_installation_paths()->root . 'configs/htaccess.dist';
-				
-				//[B] Apache config being rewritten if modified by cpanel #2179
-				$comapreFunc = function($file){
-						$file = fopen($file, 'r');
-						$line = fgets($file);
-						fclose($file);
-						$line = preg_replace('/\s+/','', trim($line));
-						return str_replace('#', '', $line);
-				};
-				
-				//[E] Stop rewriting .htaccess every time page loads during installation #2091
-				if(file_exists($path . '.htaccess')) {
-						$actual_check_sum = $comapreFunc($path . '.htaccess');
-						$org_check_sum    = $comapreFunc($file);
-						if($org_check_sum == $actual_check_sum) {
-								return true;
-						}
-				}
-				return file_put_contents($path . '.htaccess', file_get_contents($file));
-		} elseif($type == 'php_user_ini') {
+		if($type == 'php_user_ini') {
 				$path = str_replace('installation/', '', ossn_installation_paths()->root);
 				$file = ossn_installation_paths()->root . 'configs/user.ini.dist';
 				$file = file_get_contents($file);

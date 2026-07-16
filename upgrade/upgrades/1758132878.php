@@ -9,7 +9,6 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 
-ossn_generate_server_config('apache');
 ossn_version_upgrade('8.3');
 
 $factory = new OssnFactory(array(

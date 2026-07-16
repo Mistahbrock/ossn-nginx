@@ -99,19 +99,6 @@ class OssnInstallation extends stdClass {
 		}
 
 		/**
-		 * Check if server is running apache or litespeed
-		 * @last edit: $arsalanshah
-		 * @Reason: Initial;
-		 *
-		 */
-		public static function isApache() {
-				if(preg_match('/apache/i', $_SERVER['SERVER_SOFTWARE']) || preg_match('/LiteSpeed/i', $_SERVER['SERVER_SOFTWARE'])) {
-						return true;
-				}
-				return false;
-		}
-
-		/**
 		 * Check if the web server is nginx
 		 *
 		 */

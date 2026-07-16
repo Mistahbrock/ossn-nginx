@@ -92,14 +92,14 @@ https://www.opensource-socialnetwork.org/wiki/view/706/how-to-install-open-sourc
 
 Directory Permissions
 ============
-OSSN must be installed into a directory writable by the webserver, or it will not function properly. For most Linux servers running Apache v2, making the parent directory writable is very simple:
+OSSN must be installed into a directory writable by the web server (nginx / PHP-FPM), or it will not function properly. On most Linux servers, making the parent directory writable is very simple:
 
 ```
 chgrp www-data /path/to/ossn_parent_directory
 chmod g+w /path/to/ossn_parent_directory
 ``` 
 
-If you are not running Apache v2 or are using a different type of webserver, you'll need to read your system's documentation or speak to your server administrator before proceeding.
+Adjust the group (`www-data`) to match the user your PHP-FPM pool runs as. See [INSTALL-NGINX.md](INSTALL-NGINX.md) for the nginx server configuration.
 
 Installation
 ============

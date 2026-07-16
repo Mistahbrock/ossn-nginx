@@ -9,7 +9,6 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 set_time_limit(0);
-ossn_generate_server_config('apache');
 ossn_generate_server_config('php_user_ini');
 ossn_version_upgrade('6.4');
 

@@ -45,14 +45,11 @@ $englsih = array(
 		'ossn:install:mysqli'               => 'MYSQLI ENABLED',
 		'ossn:install:mysqli:required'      => 'MYSQLI PHP EXTENSION REQUIRED',
 
-		'ossn:install:apache'               => 'APACHE ENABLED',
-		'ossn:install:apache:required'      => 'APACHE IS REQUIRED',
+		'ossn:install:webserver'            => 'NGINX ENABLED',
+		'ossn:install:webserver:required'   => 'NGINX IS REQUIRED',
 
-		'ossn:install:webserver'            => 'WEB SERVER (Apache/Nginx)',
-		'ossn:install:webserver:required'   => 'APACHE OR NGINX IS REQUIRED',
-
-		'ossn:install:modrewrite'           => 'MOD_REWRITE',
-		'ossn:install:modrewrite:required'  => 'MOD_REWRITE REQUIRED',
+		'ossn:install:modrewrite'           => 'URL REWRITE',
+		'ossn:install:modrewrite:required'  => 'URL REWRITE REQUIRED',
 
 		'ossn:install:curl'                 => 'PHP CURL',
 		'ossn:install:curl:required'        => 'PHP CURL REQUIRED',
@@ -75,7 +72,7 @@ $englsih = array(
 
 		'ossn:install:ziparchive'           => 'PHP ZipArchive ENABLED',
 		'ossn:install:ziparchive:error'     => 'PHP ZipArchive EXTENSION REQUIRED',
-		'ossn:install:cachedir:note:failed' => 'Make sure your files and directories are owned by correct apache user.',
+		'ossn:install:cachedir:note:failed' => 'Make sure your files and directories are owned by correct web server user.',
 
 		'ossn:install:checklist'            => 'Prerequisites',
 		'ossn:install:licence'              => 'License',
