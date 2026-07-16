@@ -187,12 +187,6 @@ function ossn_admin_menus_init() {
 						'text' => ossn_print('admin:view:site'),
 						'href' => ossn_site_url(),
 				),
-				array(
-						'name'   => 'support',
-						'text'   => ossn_print('ossn:premium'),
-						'href'   => 'https://www.openteknik.com/',
-						'target' => '_blank',
-				),
 		);
 		foreach ($topbar_admin as $item) {
 				ossn_register_menu_item('topbar_admin', $item);
