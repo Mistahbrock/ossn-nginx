@@ -67,11 +67,6 @@ function getStepClass($step_name, $steps_order, $current_index) {
             <div>
                 <div class="sidebar-logo">
                     <img src="./styles/logo.png" alt="Logo" class="sidebar-img-logo">
-                    <div class="premium-badge-wrapper d-none">
-                        <span class="badge premium-badge">
-                            <i class="bi bi-patch-check-fill me-1"></i> PREMIUM EDITION
-                        </span>
-                    </div>
                 </div>
 
                 <!-- Installation Steps -->
