@@ -91,3 +91,15 @@ input.form-control, textarea.form-control, select.form-control,
 
 h1,h2,h3,h4,h5,h6 { color: var(--dk-text); }
 hr { border-color: var(--dk-border); }
+
+/* ---- Force readable text where the base CSS hardcodes dark colours ---- */
+input[type='number'], input[type='email'], select, input[type="password"], input[type="text"], textarea,
+label,
+.ossn-message-box .contents label,
+.card-header,
+.ossn-admin-search-pro-line input[type="text"],
+.ossn-pagination .page-link:hover,
+.ossn-com-row .com-ui-name,
+.ossn-admin-ad-cron .title-text h4 {
+	color: var(--dk-text) !important;
+}

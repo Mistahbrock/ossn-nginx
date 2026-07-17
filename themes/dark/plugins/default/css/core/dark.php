@@ -19,8 +19,8 @@ body {
 	background-color: var(--dk-bg) !important;
 	color: var(--dk-text);
 }
-a { color: var(--dk-accent); }
-a:hover { color: #2aa7cc; }
+a { color: var(--dk-text); }
+a:hover { color: var(--dk-accent); }
 
 /* Scrollbars */
 ::-webkit-scrollbar-track { background-color: var(--dk-bg); border-left: 1px solid var(--dk-border); }
@@ -225,5 +225,51 @@ hr { border-color: var(--dk-border); }
 .ossn-comments-container textarea {
 	background-color: #161616 !important;
 	color: var(--dk-text) !important;
+	border-color: var(--dk-border) !important;
+}
+
+/* ---- Force readable text where the base CSS hardcodes dark colours ---- */
+.topbar .ossn-icons-topbar-friends, .topbar .ossn-icons-topbar-messages, .topbar .ossn-icons-topbar-notification i,
+.ossn-topbar-dropdown-menu ul li a, .ossn-topbar-dropdown-menu ul li,
+.sidebar .sidebar-parent-item-main[aria-expanded="true"] a,
+ul.token-input-list,
+li.token-input-token,
+li.token-input-selected-token,
+div.token-input-dropdown ul li.token-input-selected-dropdown-item,
+.ossn-message-box .contents label,
+.button-grey, .btn-action,
+.btn-default,
+.btn-default:focus, .btn-default.focus,
+.btn-default:hover,
+.btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default,
+.ossn-notifications-box,
+.ossn-notifications-box .type-name,
+.ossn-notifications-box .notfi-meta,
+.ossn-notifications-friends-inner a,
+.ossn-chat-base,
+.ossn-chat-tab-titles,
+.ossn-search input[type='text'],
+.ossn-ad-item a,
+.btn-standalone-grey,
+.btn-standalone-grey:hover,
+.upload-photo span,
+#group-header-menu>ul>li>a,
+.ossn-group-profile .profile-header .group-name a {
+	color: var(--dk-text) !important;
+}
+
+/* Surfaces that were still light behind that text */
+.ossn-notifications-box,
+.ossn-chat-base,
+.ossn-chat-tab-titles {
+	background-color: var(--dk-surface) !important;
+	border-color: var(--dk-border) !important;
+}
+.ossn-search input[type='text'],
+ul.token-input-list,
+li.token-input-token,
+li.token-input-selected-token,
+div.token-input-dropdown {
+	background-color: #161616 !important;
 	border-color: var(--dk-border) !important;
 }
