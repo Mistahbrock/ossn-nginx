@@ -103,3 +103,69 @@ label,
 .ossn-admin-ad-cron .title-text h4 {
 	color: var(--dk-text) !important;
 }
+
+/* ---- Remaining light surfaces in the admin panel ---- */
+.ossn-admin-pg-content, form,
+input[type="search"]:focus, input[type="text"]:focus, textarea:focus,
+.admin-dashboard-box-small,
+.ossn-message-box,
+.ossn-page-loading-annimation,
+.ossn-admin-all-users,
+.ossn-users-list thead tr, .ossn-users-list tr.table-titles,
+.ossn-admin-search-pro-line,
+.ossn-pagination .page-link,
+.ossn-admin-dashboard .graph-card-main,
+.ossn-admin-dashboard .pie-mini-card,
+.ossn-admin-dashboard .metric-card,
+.ossn-admin-dashboard .cache-action-card,
+.ossn-com-row,
+.ossn-ad-creation-form .form-control-fancy:focus,
+.ossn-ad-creation-form .image-preview-box,
+.ossn-admin-ad-cron {
+	background-color: var(--dk-surface) !important;
+	border-color: var(--dk-border) !important;
+}
+input[type='number'], input[type='email'], select, input[type="password"], input[type="text"], textarea,
+.page-title,
+.table-titles,
+.ossn-message-box .title,
+.logo-container-goblue img,
+.card-header,
+.page-link:hover,
+.ossn-admin-all-users .user-avatar-modern,
+.ossn-admin-search-pro-line .btn-search-trigger,
+.ossn-admin-search-pro-line .btn-search-trigger:hover,
+.ossn-pagination .page-link:hover,
+.ossn-pagination .page-item:first-child .page-link, .ossn-pagination .page-item:last-child .page-link,
+.ossn-pagination .page-item.disabled .page-link,
+.ossn-admin-dashboard .bg-red,
+.ossn-admin-dashboard .bg-orange,
+.ossn-com-row .dot-inactive,
+.ossn-com-row .com-ui-version,
+.ossn-com-row .com-ui-preview-thumb,
+.ossn-ad-creation-form .form-control-fancy,
+.ossn-ad-creation-form .ossn-ad-dropzone-wrapper,
+.ossn-ad-creation-form .ossn-ad-dropzone-wrapper.drag-over,
+.ossn-ad-creation-form .btn-remove-preview,
+.ossn-ad-creation-form .btn-remove-preview:hover,
+.ossn-ads-management-table th,
+.ossn-ads-management-table .btn-flat-edit,
+.ossn-ads-management-table .btn-flat-edit:hover,
+.ossn-admin-ad-cron summary,
+.ossn-admin-ad-cron .clock-icon-wrapper,
+.ossn-admin-ad-cron .command-box,
+.ossn-admin-ad-cron .path-placeholder {
+	background-color: var(--dk-surface-2) !important;
+	border-color: var(--dk-border) !important;
+}
+.metric-card,
+.graph-card-main,
+.pie-mini-card,
+.cache-action-card,
+.admin-dashboard-contents,
+.admin-dashboard-title,
+.card-value {
+	background-color: var(--dk-surface) !important;
+	color: var(--dk-text) !important;
+	border-color: var(--dk-border) !important;
+}

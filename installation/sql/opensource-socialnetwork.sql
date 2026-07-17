@@ -176,7 +176,7 @@ CREATE TABLE `ossn_site_settings` (
 --
 
 INSERT INTO `ossn_site_settings` (`setting_id`, `name`, `value`) VALUES
-(1, 'theme', 'goblue'),
+(1, 'theme', 'dark'),
 (2, 'site_name', '<<sitename>>'),
 (3, 'language', 'en'),
 (4, 'cache', '0'),
