@@ -3,13 +3,13 @@
  * Loaded after administrator.php so these rules win.
  ******************************************************************/
 :root {
-	--dk-bg:        #0f1216;
-	--dk-surface:   #1a1e24;
-	--dk-surface-2: #232a32;
-	--dk-border:    #2b323b;
-	--dk-text:      #e6e8eb;
-	--dk-muted:     #9aa4af;
-	--dk-accent-2:  #0b769c;
+	--dk-bg:        #171717;
+	--dk-surface:   #1e1e1e;
+	--dk-surface-2: #26292b;
+	--dk-border:    #33383b;
+	--dk-text:      #abb8c3;
+	--dk-muted:     #7c8894;
+	--dk-accent-2:  #00728f;
 }
 
 body { background-color: var(--dk-bg) !important; color: var(--dk-text); }
@@ -83,7 +83,7 @@ body { background-color: var(--dk-bg) !important; color: var(--dk-text); }
 /* Form controls */
 input.form-control, textarea.form-control, select.form-control,
 .ossn-form input, .ossn-form textarea, .ossn-form select {
-	background-color: #12161b !important;
+	background-color: #161616 !important;
 	color: var(--dk-text) !important;
 	border: 1px solid var(--dk-border) !important;
 }

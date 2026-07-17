@@ -4,14 +4,14 @@
  * Only colours/surfaces are changed here; layout is inherited.
  ******************************************************************/
 :root {
-	--dk-bg:        #0f1216; /* page background            */
-	--dk-surface:   #1a1e24; /* cards, topbar, sidebar     */
-	--dk-surface-2: #232a32; /* sub-surfaces, hovers       */
-	--dk-border:    #2b323b; /* borders / dividers         */
-	--dk-text:      #e6e8eb; /* primary text               */
-	--dk-muted:     #9aa4af; /* secondary/muted text       */
-	--dk-accent:    #3fb1d9; /* links / accents (kept blue)*/
-	--dk-accent-2:  #0b769c; /* darker accent              */
+	--dk-bg:        #171717; /* page background            */
+	--dk-surface:   #1e1e1e; /* cards, topbar, sidebar     */
+	--dk-surface-2: #26292b; /* sub-surfaces, hovers       */
+	--dk-border:    #33383b; /* borders / dividers         */
+	--dk-text:      #abb8c3; /* primary text               */
+	--dk-muted:     #7c8894; /* secondary/muted text       */
+	--dk-accent:    #008cb4; /* links / accents (kept blue)*/
+	--dk-accent-2:  #00728f; /* darker accent              */
 }
 
 /* ---- Base ---- */
@@ -20,7 +20,7 @@ body {
 	color: var(--dk-text);
 }
 a { color: var(--dk-accent); }
-a:hover { color: #66c6e6; }
+a:hover { color: #2aa7cc; }
 
 /* Scrollbars */
 ::-webkit-scrollbar-track { background-color: var(--dk-bg); border-left: 1px solid var(--dk-border); }
@@ -118,14 +118,14 @@ a:hover { color: #66c6e6; }
 input.form-control,
 textarea.form-control,
 select.form-control {
-	background-color: #12161b !important;
+	background-color: #161616 !important;
 	color: var(--dk-text) !important;
 	border: 1px solid var(--dk-border) !important;
 }
 .ossn-form textarea:focus,
 .ossn-form input:focus,
 .form-control:focus {
-	background-color: #12161b !important;
+	background-color: #161616 !important;
 	border-color: var(--dk-accent) !important;
 	color: var(--dk-text) !important;
 }
@@ -202,7 +202,7 @@ hr { border-color: var(--dk-border); }
 .ossn-wall-textarea,
 .ossn-wall-privacy,
 .ossn-wall-privacy-dummy {
-	background-color: #12161b !important;
+	background-color: #161616 !important;
 	color: var(--dk-text) !important;
 	border-color: var(--dk-border) !important;
 }
@@ -223,7 +223,7 @@ hr { border-color: var(--dk-border); }
 .comments-item .meta { color: var(--dk-muted) !important; }
 .ossn-comments-container input[type='text'],
 .ossn-comments-container textarea {
-	background-color: #12161b !important;
+	background-color: #161616 !important;
 	color: var(--dk-text) !important;
 	border-color: var(--dk-border) !important;
 }
