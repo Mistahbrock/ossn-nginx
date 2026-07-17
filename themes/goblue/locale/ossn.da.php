@@ -9,8 +9,8 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 $da = array(
-    'goblue:settings'                => 'GoBlue',
-    'admin:theme:goblue'             => 'GoBlue',
+    'goblue:settings'                => 'GoDark',
+    'admin:theme:goblue'             => 'GoDark',
     'theme:goblue:logo:site'         => 'Websted Logo',
     'theme:goblue:logo:admin'        => 'Admin Logo',
     'theme:goblue:logo:large'        => 'Logo filen er for stor!',

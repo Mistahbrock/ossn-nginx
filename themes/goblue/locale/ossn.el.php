@@ -9,8 +9,8 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 ossn_register_languages('el', array(
-	'goblue:settings' => 'GoBlue',
-	'admin:theme:goblue' => 'GoBlue',
+	'goblue:settings' => 'GoDark',
+	'admin:theme:goblue' => 'GoDark',
 	'theme:goblue:logo:site' => 'Λογότυπο ιστότοπου',
 	'theme:goblue:logo:admin' => 'Λογότυπο διαχειριστή',
 	'theme:goblue:logo:large' => 'Το αρχείο λογότυπου είναι πολύ μεγάλο!',

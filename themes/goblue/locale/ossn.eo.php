@@ -9,8 +9,8 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 ossn_register_languages('eo', array(
-	'goblue:settings' => 'GoBlue',
-	'admin:theme:goblue' => 'GoBlue',
+	'goblue:settings' => 'GoDark',
+	'admin:theme:goblue' => 'GoDark',
 	'theme:goblue:logo:site' => 'Loko Logo',
 	'theme:goblue:logo:admin' => 'Logoo de Admin',
 	'theme:goblue:logo:large' => 'Logo-dosiero estas tro granda!',

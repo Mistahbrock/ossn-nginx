@@ -9,8 +9,8 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 ossn_register_languages('ru', array(
-	'goblue:settings' => 'GoBlue',
-	'admin:theme:goblue' => 'GoBlue',
+	'goblue:settings' => 'GoDark',
+	'admin:theme:goblue' => 'GoDark',
 	'theme:goblue:logo:site' => 'Логотип сайта',
 	'theme:goblue:logo:admin' => 'Логотип администратора',
 	'theme:goblue:logo:large' => 'Файл с логотипом слишком большой!',

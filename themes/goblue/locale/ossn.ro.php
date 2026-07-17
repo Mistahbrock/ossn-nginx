@@ -9,8 +9,8 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 ossn_register_languages('ro', array(
-	'goblue:settings' => 'GoBlue',
-	'admin:theme:goblue' => 'GoBlue',
+	'goblue:settings' => 'GoDark',
+	'admin:theme:goblue' => 'GoDark',
 	'theme:goblue:logo:site' => 'Logo-ul site-ului',
 	'theme:goblue:logo:admin' => 'Logo-ul Admin',
 	'theme:goblue:logo:large' => 'Fișierul logo este prea mare!',

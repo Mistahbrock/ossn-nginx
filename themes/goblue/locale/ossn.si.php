@@ -9,8 +9,8 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 $si = array(
-	'goblue:settings' => 'GoBlue',
-	'admin:theme:goblue' => 'GoBlue',
+	'goblue:settings' => 'GoDark',
+	'admin:theme:goblue' => 'GoDark',
 	'theme:goblue:logo:site' => 'වෙබ් අඩවි ලෝගෝ ',
 	'theme:goblue:logo:admin' => 'පරිපාලක ලෝගෝ ',
 	'theme:goblue:logo:large' => 'ලෝගෝ ගොනුව විශාලවැඩියි!',

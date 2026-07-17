@@ -9,8 +9,8 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 ossn_register_languages('it', array(
-	'goblue:settings' => 'GoBlue',
-	'admin:theme:goblue' => 'GoBlue',
+	'goblue:settings' => 'GoDark',
+	'admin:theme:goblue' => 'GoDark',
 	'theme:goblue:logo:site' => 'Logo del sito',
 	'theme:goblue:logo:admin' => 'Logo amministratore',
 	'theme:goblue:logo:large' => 'Il file del logo è troppo grande!',

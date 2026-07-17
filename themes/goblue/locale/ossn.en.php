@@ -9,8 +9,8 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 $en = array(
-		'goblue:settings'                => 'GoBlue',
-		'admin:theme:goblue'             => 'GoBlue',
+		'goblue:settings'                => 'GoDark',
+		'admin:theme:goblue'             => 'GoDark',
 		'theme:goblue:logo:site'         => 'Site Logo',
 		'theme:goblue:logo:admin'        => 'Admin Logo',
 		'theme:goblue:logo:large'        => 'Logo file is too large!',

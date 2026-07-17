@@ -9,8 +9,8 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 $ta = array(
-		'goblue:settings'                => 'GoBlue',
-		'admin:theme:goblue'             => 'GoBlue',
+		'goblue:settings'                => 'GoDark',
+		'admin:theme:goblue'             => 'GoDark',
 		'theme:goblue:logo:site'         => 'தளச் சின்னம்',
 		'theme:goblue:logo:admin'        => 'நிர்வாகிச் சின்னம்',
 		'theme:goblue:logo:large'        => 'சின்னத்தின் கோப்பு மிகப்பெரியது!',
