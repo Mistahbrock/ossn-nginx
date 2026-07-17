@@ -19,12 +19,20 @@ function ossn_goblue_theme_init() {
 		ossn_new_css('ossn.default', 'css/core/default');
 		ossn_new_css('ossn.admin.default', 'css/core/administrator');
 
+		//dark colour overrides (registered here, loaded last below so they win)
+		ossn_new_css('ossn.dark', 'css/core/dark');
+		ossn_new_css('ossn.dark.admin', 'css/core/dark-admin');
+
 		//load bootstrap
 		ossn_load_css('bootstrap.min', 'admin');
 		ossn_load_css('bootstrap.min');
 
 		ossn_load_css('ossn.default');
 		ossn_load_css('ossn.admin.default', 'admin');
+
+		//load dark overrides last
+		ossn_load_css('ossn.dark');
+		ossn_load_css('ossn.dark.admin', 'admin');
 
 		ossn_extend_view('ossn/admin/head', 'ossn_goblue_admin_head');
 		ossn_extend_view('ossn/site/head', 'ossn_goblue_head');
