@@ -177,3 +177,53 @@ table td, table th { border-color: var(--dk-border) !important; }
 	border-color: var(--dk-border) !important;
 }
 hr { border-color: var(--dk-border); }
+
+/* ---- Wall / posts (OssnWall) ---- */
+.ossn-wall-container,
+.ossn-wall,
+.ossn-wall-item,
+.ossn-wall-items,
+.ossn-wall-container-data,
+.post-contents,
+.post-menu,
+.wall-tabs,
+.group-wall,
+.ossn-wall-post,
+.ossn-wall-image-container {
+	background-color: var(--dk-surface) !important;
+	color: var(--dk-text);
+	border-color: var(--dk-border) !important;
+}
+.ossn-wall-item .meta,
+.ossn-wall-post-time,
+.ossn-wall-item-type { color: var(--dk-muted) !important; }
+
+/* Post composer + privacy selector */
+.ossn-wall-textarea,
+.ossn-wall-privacy,
+.ossn-wall-privacy-dummy {
+	background-color: #12161b !important;
+	color: var(--dk-text) !important;
+	border-color: var(--dk-border) !important;
+}
+.wall-tabs .active,
+.wall-tabs li:hover { background-color: var(--dk-surface-2) !important; }
+
+/* ---- Comments (OssnComments) ---- */
+.comments-list { background-color: transparent !important; }
+.comments-item,
+.ossn-comment-attachment,
+.ossn-comment-menu {
+	background-color: var(--dk-surface-2) !important;
+	color: var(--dk-text) !important;
+	border-color: var(--dk-border) !important;
+}
+.comments-item a { color: var(--dk-text); }
+.comments-item .comments-likes,
+.comments-item .meta { color: var(--dk-muted) !important; }
+.ossn-comments-container input[type='text'],
+.ossn-comments-container textarea {
+	background-color: #12161b !important;
+	color: var(--dk-text) !important;
+	border-color: var(--dk-border) !important;
+}
