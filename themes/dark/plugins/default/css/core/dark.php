@@ -397,3 +397,24 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item,
 	color: var(--dk-text) !important;
 	border-color: var(--dk-border) !important;
 }
+
+/* ---- Primary buttons: WordPress teal (#008cb4) with white text ---- */
+.btn-primary,
+.ossn-wall-post,
+.ossn-button-submit,
+#ossn-submit-button {
+	background: var(--dk-accent) !important;
+	border-color: var(--dk-accent) !important;
+	color: #fff !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.ossn-wall-post:hover,
+.ossn-button-submit:hover,
+#ossn-submit-button:hover {
+	background: var(--dk-accent-2) !important;
+	border-color: var(--dk-accent-2) !important;
+	color: #fff !important;
+}
